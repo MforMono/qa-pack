@@ -1,0 +1,22 @@
+name: Packagist
+
+on:
+    push:
+    schedule:
+        -
+            cron: "0 1 * * 6" # Run at 1am every Saturday
+    workflow_dispatch:
+
+jobs:
+    dispatch:
+        name: Dispatch to packagist github repository
+
+        runs-on: ubuntu-latest
+
+        steps:
+            -   name: Update satis
+                uses: peter-evans/repository-dispatch@v3
+                with:
+                    token: ${{ secrets.PAT }}
+                    repository: MforMono/satis
+                    event-type: satis

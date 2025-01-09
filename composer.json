@@ -1,0 +1,12 @@
+{
+    "name": "mformono/qa-pack",
+    "type": "symfony-pack",
+    "license": "MIT",
+    "description": "A pack for QA with tools",
+    "require": {
+        "mformono/phpstan-pack": "*",
+        "rector/rector": "*",
+	"symplify/easy-coding-standard": "*",
+	"vincentlanglet/twig-cs-fixer": "*"
+    }
+}
